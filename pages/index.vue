@@ -1,32 +1,46 @@
-<!-- <script setup>
-import Navbar from '../components/Navbar.vue'
-import { useHead } from '#app'
-
-useHead({
-    title: "Abdelrahman's Portfolio"
-})
-</script>
+<script setup>
+    import { useHead } from '#app';
+    import Navbar from '~/components/Navbar.vue';
+    useHead({
+        title: "Abdelrahman's Portfolio"
+    })
+  const experiences = [
+    {
+      date: '03/2025 – Present',
+      role: 'Part-Time Frontend Developer',
+      company: 'Homains',
+      desc: 'Built responsive web app with Vue, Nuxt, and Vuetify from Figma designs.'
+    },
+    {
+      date: '12/2024 – 03/2025',
+      role: 'Frontend Developer Intern',
+      company: 'Homains',
+      desc: 'Led UI development and API integration with Angular & Ant-design.'
+    },
+    {
+      date: '04/2025 – 06/2025',
+      role: 'Frontend Developer',
+      company: 'Start for Business Development',
+      desc: 'Developed responsive e-commerce applications with HTML, SCSS, and Django Views.'
+    }
+  ]
+  </script>
 
 <template>
-    
     <Navbar/>
-</template> -->
-
-<template>
-    <Navbar/>
+     
       <!-- HERO SECTION -->
-      <!-- HERO SECTION -->
-<section class="hero-section d-flex flex-column align-center justify-center">
-  <v-container class="text-center">
-    <h1 class="text-h2 font-weight-bold mb-4">Abdelrahman Mahmoud</h1>
-    <h2 class="text-h5 mb-6">Frontend Developer</h2>
-    <p class="text-body-1 mb-8">
-      Building clean, modern, and responsive user interfaces with Vue, Nuxt, and Vuetify.
-    </p>
-    <v-btn color="brand" class="mr-4" large>View Projects</v-btn>
-    <v-btn variant="outlined" color="brand" large>Contact Me</v-btn>
-  </v-container>
-</section>
+      <section class="hero-section d-flex flex-column align-center justify-center">
+        <v-container class="text-center">
+          <h1 class="text-h2 font-weight-bold mb-4">Abdelrahman Mahmoud</h1>
+          <h2 class="text-h5 mb-6">Frontend Developer</h2>
+          <p class="text-body-1 mb-8">
+            Building clean, modern, and responsive user interfaces with Vue, Nuxt, and Vuetify.
+          </p>
+          <v-btn color="brand" class="mr-4" large>View Projects</v-btn>
+          <v-btn variant="outlined" color="brand" large>Contact Me</v-btn>
+        </v-container>
+      </section>
   
       <!-- ABOUT ME -->
       <section class="py-16">
@@ -96,7 +110,7 @@ useHead({
       </section>
   
       <!-- EXPERIENCE TIMELINE -->
-      <section class="bg-light py-16">
+      <!-- <section class="bg-light py-16">
         <v-container>
           <h2 class="section-title mb-8">Experience</h2>
           <v-timeline align="start">
@@ -116,7 +130,7 @@ useHead({
             </v-timeline-item>
           </v-timeline>
         </v-container>
-      </section>
+      </section> -->
   
       <!-- CONTACT -->
       <section class="py-16">
@@ -139,33 +153,7 @@ useHead({
       </v-footer>
   </template>
   
-  <script setup>
-    import { useHead } from '#app';
-    import Navbar from '~/components/Navbar.vue';
-    useHead({
-        title: "Abdelrahman's Portfolio"
-    })
-  const experiences = [
-    {
-      date: '03/2025 – Present',
-      role: 'Part-Time Frontend Developer',
-      company: 'Homains',
-      desc: 'Built responsive web app with Vue, Nuxt, and Vuetify from Figma designs.'
-    },
-    {
-      date: '12/2024 – 03/2025',
-      role: 'Frontend Developer Intern',
-      company: 'Homains',
-      desc: 'Led UI development and API integration with Angular & Ant-design.'
-    },
-    {
-      date: '04/2025 – 06/2025',
-      role: 'Frontend Developer',
-      company: 'Start for Business Development',
-      desc: 'Developed responsive e-commerce applications with HTML, SCSS, and Django Views.'
-    }
-  ]
-  </script>
+  
   
   <style scoped>
   .hero-section {
