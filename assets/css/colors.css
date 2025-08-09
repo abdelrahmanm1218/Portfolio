@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Color System
+   ========================================================================== */
+
+:root {
+  /* Brand Colors */
+  --color-brand: #123524;
+  --color-brand-secondary: #123452; /* Your secondary brand color */
+  
+  /* Neutral Colors - Light Theme */
+  --color-background: #f8f9fa;
+  --color-card: #ffffff;
+  --color-text: #1a1a1a;
+  --color-border: #e0e0e0;
+  --color-divider: #e0e0e0;
+  
+  /* Additional semantic colors for better UX */
+  --color-text-muted: #6c757d;
+  --color-text-light: #adb5bd;
+  --color-surface: var(--color-card);
+  --color-surface-variant: #f1f3f4;
+  
+  /* Interactive states */
+  --color-brand-hover: #0d291b;
+  --color-brand-light: rgba(18, 53, 36, 0.1);
+  --color-brand-lighter: rgba(18, 53, 36, 0.05);
+  
+  /* Secondary brand color variations */
+  --color-brand-secondary-hover: #0f2a42;
+  --color-brand-secondary-light: rgba(18, 52, 82, 0.1);
+  --color-brand-secondary-lighter: rgba(18, 52, 82, 0.05);
+  --color-brand-secondary-tint-10: #1e3f5c; /* 10% lighter tint */
+  --color-brand-secondary-tint-20: #2a4a66; /* 20% lighter tint */
+  --color-brand-secondary-tint-30: #365570; /* 30% lighter tint */
+  --color-brand-secondary-tint-40: #42607a; /* 40% lighter tint */
+  --color-brand-secondary-tint-50: #4e6b84; /* 50% lighter tint */
+  
+  /* Shadow colors */
+  --color-shadow-light: rgba(0, 0, 0, 0.1);
+  --color-shadow-medium: rgba(0, 0, 0, 0.15);
+  --color-shadow-dark: rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+/* Background utilities */
+.bg-brand { background-color: var(--color-brand) !important; }
+.bg-background { background-color: var(--color-background) !important; }
+.bg-card { background-color: var(--color-card) !important; }
+.bg-surface { background-color: var(--color-surface) !important; }
+.bg-surface-variant { background-color: var(--color-surface-variant) !important; }
+
+/* Text color utilities */
+.text-brand { color: var(--color-brand) !important; }
+.text-primary { color: var(--color-text) !important; }
+.text-muted { color: var(--color-text-muted) !important; }
+.text-light { color: var(--color-text-light) !important; }
+
+/* Border utilities */
+.border-brand { border-color: var(--color-brand) !important; }
+.border-default { border-color: var(--color-border) !important; }
+.border-divider { border-color: var(--color-divider) !important; }
+
+/* ==========================================================================
+   Global Overrides
+   ========================================================================== */
+
+/* Set default text color */
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Card styling */
+.v-card {
+  background-color: var(--color-card) !important;
+  border: 1px solid var(--color-border);
+}
+
+/* Form inputs */
+.v-text-field .v-input__control,
+.v-textarea .v-input__control {
+  background-color: var(--color-card);
+}
+
+/* Dividers */
+.v-divider {
+  border-color: var(--color-divider) !important;
+}
