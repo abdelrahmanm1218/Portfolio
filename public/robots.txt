@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+Sitemap: https://abdelrahman-mahmoud-portfolio.vercel.app/sitemap.xml
+
