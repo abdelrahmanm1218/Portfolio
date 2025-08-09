@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  css: [
+    '~/assets/css/colors.css'
+  ],
   plugins: [
     '~/plugins/vuetify.ts',
   ],
@@ -16,7 +19,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       link:[
-        {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}, //change this to my logo
+        {rel: 'icon', type: 'image/x-icon', href: '/am-logo.png'}, //change this to my logo
       ]
     }
   }
