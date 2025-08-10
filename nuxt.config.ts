@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en'
       },
-      title: 'Abdelrahman Mahmoud - Frontend Developer Portfolio',
+      title: 'Abdelrahman Mahmoud | Frontend Developer',
       link:[
         {rel: 'icon', type: 'image/x-icon', href: '/am-logo.png'}, //change this to my logo
         { rel: 'canonical', href: 'https://abdelrahman-mahmoud-portfolio.vercel.app' }, // Replace with your actual URL
@@ -29,14 +29,14 @@ export default defineNuxtConfig({
       meta:[
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'description', content: 'Frontend Developer with 2 years of experience in Vue, Nuxt, Angular, TypeScript, and modern web technologies. Building scalable and responsive user interfaces. also have experience as a Backend Developer using Python, Django, MVT, MySQL' },
-        { name: 'keywords', content: 'frontend developer, vue.js, nuxt.js, angular, typescript, javascript, python, djanog, api, backend development, web developer, portfolio, abdelrahman mahmoud,' },
+        { name: 'description', content: "I'm Abdelrahman Mahmoud, Frontend Developer with 2 years of hands-on experience in Web Development using Vue, Nuxt, Angular, TypeScript, and modern web technologies. Helping Businesses to build scalable and responsive UI, also I have experience as a Backend Developer using Python, Django, MVT, API, Go, Swagger, apidog, MySQL" },
+        { name: 'keywords', content: 'frontend developer, vue.js, nuxt.js, angular, typescript, javascript, python, django, api, backend development, web developer, portfolio, abdelrahman mahmoud,' },
         { name: 'author', content: 'Abdelrahman Mahmoud' },
         { name: 'robots', content: 'index, follow' },
         { name: 'google-site-verification', content: '-lv4_8Y8Rs2jxCu57EeSYVkhdSfTz6BhK42HnyBJGjU' },
 
         //og graph
-        { property: 'og:title', content: 'Abdelrahman Mahmoud - Frontend Developer Portfolio' },
+        { property: 'og:title', content: 'Abdelrahman Mahmoud | Frontend Developer' },
         { property: 'og:description', content: 'Frontend Developer with experience in Vue, Nuxt, Angular, TypeScript to build scalable and responsive User Interfaces' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://abdelrahman-mahmoud-portfolio.vercel.app' },
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
               'https://github.com/abdelrahmanm1218',
 
             ],
-            knowsAbout: ['Vue.js', 'Nuxt.js', 'Angular', 'TypeScript', 'JavaScript', 'Web Development', 'Frontend Development',  'Vuetify', 'Bootstrap', 'Ant-Design', "Git", 'Github', 'Pyhton', 'Django', 'APIs', 'REST API', 'SQL', 'MySQL', 'Backend Development'],
+            knowsAbout: ['Vue.js', 'Nuxt.js', 'Angular', 'TypeScript', 'JavaScript', 'Web Development', 'Frontend Development',  'Vuetify', 'Bootstrap', 'Ant-Design', "Git", 'Github', 'Pyhton', 'Django', 'APIs', 'REST API', 'SQL', 'MySQL', 'Backend Development', 'Swagger', 'Apidog'],
             alumniOf: 'Computer Engineering'
           })
         }

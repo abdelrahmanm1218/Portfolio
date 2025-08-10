@@ -2,7 +2,7 @@
     import { useHead } from '#app';
     import Navbar from '~/components/Navbar.vue';
     useHead({
-        title: "Abdelrahman's Portfolio"
+        title: "Abdelrahman Mahmoud | Frontend Developer Portfolio"
     })
   const experiences = [
     {
