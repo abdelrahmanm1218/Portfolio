@@ -31,7 +31,7 @@ export default defineNuxtPlugin((nuxtApp) => {
             
             // Additional semantic colors
             secondary: '#6c757d',
-            accent: '#123524',
+            accent: '#C9A66B',
             info: '#17a2b8',
             warning: '#ffc107',
             error: '#dc3545',
