@@ -37,8 +37,8 @@
           <p class="text-body-1 mb-8">
             Building clean, modern, and responsive user interfaces with Vue, Nuxt, and Vuetify.
           </p>
-          <v-btn color="brand" class="mr-4" large>View Projects</v-btn>
-          <v-btn variant="outlined" color="brand" large>Contact Me</v-btn>
+          <!-- <v-btn color="brand" class="mr-4" large>View Projects</v-btn> -->
+          <v-btn color="accent" large>Contact Me</v-btn>
         </v-container>
       </section>
   
@@ -62,7 +62,7 @@
       </section>
   
       <!-- SKILLS -->
-      <section class="bg-light py-16">
+      <section id="skills" class="bg-light py-16">
         <v-container>
           <h2 class="section-title mb-8">Skills & Tools</h2>
           <v-row>
@@ -89,7 +89,7 @@
       </section>
   
       <!-- PROJECTS -->
-      <section class="py-16">
+      <section id="#projects" class="py-16">
         <v-container>
           <h2 class="section-title mb-8">Projects</h2>
           <v-row>
