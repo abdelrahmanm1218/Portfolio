@@ -6,6 +6,7 @@
   /* Brand Colors */
   --color-brand: #123524;
   --color-brand-secondary: #123452; /* Your secondary brand color */
+  --color-accent: #C9A66B;
   
   /* Neutral Colors - Light Theme */
   --color-background: #f8f9fa;
@@ -13,6 +14,7 @@
   --color-text: #1a1a1a;
   --color-border: #e0e0e0;
   --color-divider: #e0e0e0;
+
   
   /* Additional semantic colors for better UX */
   --color-text-muted: #6c757d;
