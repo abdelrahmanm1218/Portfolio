@@ -2,10 +2,11 @@
     import { useHead } from '#app';
     import Navbar from '~/components/Navbar.vue';
     import { useDisplay } from 'vuetify';
-    
+    import MiniAbout from '~/components/miniAbout.vue';
+    import Skills from '~/components/Skills.vue';
     const {smAndUp} = useDisplay()
     useHead({
-        title: "Abdelrahman Mahmoud | Full Stack Developer Portfolio"
+        title: "Abdelrahman Mahmoud | Full Stack Engineer"
     })
 
   const experiences = useExperience();
@@ -18,7 +19,8 @@
       <Hero/>
   
       <!-- ABOUT ME -->
-      <section class="py-16">
+      <MiniAbout/>
+      <!-- <section class="py-16">
         <v-container>
           <h2 class="section-title mb-6">About Me</h2>
           <p class="mb-6">
@@ -34,10 +36,11 @@
             <v-chip color="brand" text-color="white">Angular</v-chip>
           </v-chip-group>
         </v-container>
-      </section>
+      </section> -->
   
       <!-- SKILLS -->
-      <section id="skills" class="bg-light py-16">
+       <Skills/>
+      <!-- <section id="skills" class="bg-light py-16">
         <v-container>
           <h2 class="section-title mb-8">Skills & Tools</h2>
           <v-row>
@@ -61,7 +64,7 @@
             </v-col>
           </v-row>
         </v-container>
-      </section>
+      </section> -->
   
       <!-- PROJECTS -->
       <section id="#projects" class="py-16">
