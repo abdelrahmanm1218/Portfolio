@@ -103,7 +103,7 @@
       </section>  -->
   
       <!-- CONTACT -->
-      <section class="py-16">
+      <section class="py-16" v-if="false">
         <v-container>
           <h2 class="section-title mb-8">Contact</h2>
           <v-form>
