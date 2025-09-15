@@ -4,6 +4,7 @@
     import { useDisplay } from 'vuetify';
     import MiniAbout from '~/components/miniAbout.vue';
     import Skills from '~/components/Skills.vue';
+    import { useExperience } from '~/composables/useExperience';
     const {smAndUp} = useDisplay()
     useHead({
         title: "Abdelrahman Mahmoud | Full Stack Engineer"
@@ -70,7 +71,8 @@
      <Projects/>
   
       <!-- EXPERIENCE TIMELINE -->
-      <section v-if="smAndUp" class="bg-light py-16">
+       <Experience/>
+      <!-- <section class="bg-light py-16">
         <v-container>
           <h2 class="section-title mb-8">Experience</h2>
           <v-timeline align="start">
@@ -78,19 +80,27 @@
               v-for="(exp, i) in experiences"
               :key="i"
               :dot-color="'brand'"
+              :hide-opposite="!smAndUp"
+              :side="smAndUp ? (i % 2 === 0 ? 'start' : 'end') : 'end'"
             >
+            <template v-slot:icon>
+                <v-avatar :image="exp.logo"></v-avatar>
+            </template>
               <template #opposite>
-                <strong>{{ exp.date }}</strong>
+                <strong class="d-none d-sm-inline">{{ exp.date }}</strong>
               </template>
               <v-card>
                 <v-card-title>{{ exp.role }}</v-card-title>
+                <div class="text-caption text-medium-emphasis d-sm-none px-4 pt-0">
+                  <strong>{{ exp.date }}</strong>
+                </div>
                 <v-card-subtitle>{{ exp.company }}</v-card-subtitle>
                 <v-card-text>{{ exp.desc }}</v-card-text>
               </v-card>
             </v-timeline-item>
           </v-timeline>
         </v-container>
-      </section> 
+      </section>  -->
   
       <!-- CONTACT -->
       <section class="py-16">

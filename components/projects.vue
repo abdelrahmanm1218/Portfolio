@@ -6,34 +6,37 @@
             thumbnail: "/images/projects/am-logo.png",
             short_description: "Personal portfolio to have a professional digital presence",
             description: "Personal portfolio to have a professional digital presence",
-            start_date: "7/2025",
+            start_date: "08/2025",
             end_date: "Present",
-            technologies: ["Vue js",  "Vuetify", "Nuxt.js",  "TypeScript"],
+            technologies: ["Vue js",  "Vuetify", "Nuxt.js",  "TypeScript", "SEO"],
             link: "https://abdelrahman-mahmoud-portfolio.vercel.app/",   
+            classified: false,
         },
         {
             id: "PR-02",
             project_name: "Praxis",
             thumbnail: "/images/projects/Praxis.png",
             short_description: "Internhsip program to track interns and internship cycles",
-            description: "Internhsip program to track interns and internship cycles and guide new interns",
+            description: "Internhsip program to track interns and internship cycles and guide new interns via user specific dashboards",
             start_date: "12/2024",
             end_date: "03/2025",
             technologies: ["TypeScript","Angular",  "Ant-Design", "Git-Flow"],
             link: "https://internship-dev.homains.online/home",
+            classified: false,
 
         },
-        // {
-        //     id: "PR-03",
-        //     project_name: "Praxis",
-        //     thumbnail: "/images/projects/Praxis.png",
-        //     short_description: "Internhsip program to track interns and internship cycles",
-        //     description: "Internhsip program to track interns and internship cycles and guide new interns",
-        //     start_date: "12/2024",
-        //     end_date: "03/2025",
-        //     technologies: ["TypeScript","Angular",  "Ant-Design", "Git-Flow"],
-        //     link: "https://internship-dev.homains.online/home",
-        // }
+        {
+            id: "PR-03",
+            project_name: "Classified",
+            thumbnail: "https://placehold.co/600x400?text=Classified",
+            short_description: "Open source project, that provide community for people to support the right cause",
+            description: "Open source project, that provide community for people to support & defend the right cause",
+            // start_date: "12/2024",
+            // end_date: "03/2025",
+            technologies: ["TypeScript","Vuetify",  "Vuetify", "Git-Flow"],
+            link: "",
+            classified: true, 
+        }
         
     ]
 
@@ -46,14 +49,14 @@
           <h2 class="section-title mb-8">Projects</h2>
           <v-row align="stretch">
             
-            <v-col cols="12" md="6" class="d-flex" v-for="proj in projects" :key="proj.id">
+            <v-col cols="12" md="4" class="d-flex" v-for="proj in projects" :key="proj.id">
 
                 <v-card class="project-card d-flex flex-column h-100 w-100">
                     <v-img :src="proj.thumbnail" height="200px" cover></v-img>
                     
                     
                     <v-card-title>{{ proj.project_name }}</v-card-title>
-                    <v-card-subtitle>{{ proj.start_date }} - {{ proj.end_date }}</v-card-subtitle>
+                    <v-card-subtitle v-if="proj.end_date && proj.end_date">{{ proj.start_date }} - {{ proj.end_date }}</v-card-subtitle>
                     
                     <v-card-text>
                         {{proj.short_description}}
@@ -75,8 +78,8 @@
 
                     </v-card-text>
 
-                    <v-card-actions class="mt-auto justify-end">
-                        <v-btn color="accent" variant="tonal" :href="proj.link" target="_blank" rounded="lg" density="comfortable">View</v-btn>
+                    <v-card-actions class="mt-auto justify-end" >
+                        <v-btn v-if="proj.link" color="accent" variant="tonal" :href="proj.link" target="_blank" rounded="lg" density="comfortable">View</v-btn>
                     </v-card-actions>
 
                 </v-card>
