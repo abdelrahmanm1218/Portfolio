@@ -22,7 +22,7 @@ export function useExperience(){
           date: '04/2025 – 06/2025',
           role: 'Frontend Developer',
           company: 'Start for Business Development',
-          desc: ["• Converted 25+ Figma designs into pixel-perfect, responsive E-Commerce UIs using HTML, SCSS, Bootstrap, improving design-to-development turnaround by 50% and boosting client satisfaction."],
+          desc: ["Converted 25+ Figma designs into pixel-perfect, responsive E-Commerce UIs using HTML, SCSS, Bootstrap, improving design-to-development turnaround by 50% and boosting client satisfaction."],
           logo: "/start-for-business-dev.jpeg"
         },
         // {
@@ -36,7 +36,7 @@ export function useExperience(){
           date: '10/2023 – 01/2024',
           role: 'Frontend Developer',
           company: 'EPIK for Software Solutions',
-          desc: [' Implemented 10+ Figma designs into pixel-perfect and responsive UIs.'],
+          desc: ['Implemented 10+ Figma designs into pixel-perfect and responsive UIs.'],
           logo: "/epik.jpeg"
         },
       ]
