@@ -56,7 +56,7 @@
 
           <template v-else>
             <v-carousel
-          
+          show-arrows="hover"
           hide-delimiters
           height="450"
         >
@@ -65,7 +65,7 @@
         v-bind="props"
         icon="mdi-chevron-left"
         color="accent"
-        
+        variant="tonal"
       />
     </template>
 
@@ -74,7 +74,7 @@
         v-bind="props"
         icon="mdi-chevron-right"
         color="accent"
-        
+        variant="tonal"
       />
     </template>
 
