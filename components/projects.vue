@@ -10,7 +10,7 @@
 <template>
 <section id="#projects" class="pt-8 pb-4">
         <v-container>
-          <h2 class="section-title mb-4">Projects</h2>
+          <h2 class="section-title mb-4">Latest Projects</h2>
           <template v-if="smAndUp">
             <v-row align="stretch">
             
