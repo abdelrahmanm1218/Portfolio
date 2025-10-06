@@ -5,6 +5,7 @@
     import MiniAbout from '~/components/miniAbout.vue';
     import Skills from '~/components/Skills.vue';
     import { useExperience } from '~/composables/useExperience';
+import Footer from '~/components/Footer.vue';
     const {smAndUp} = useDisplay()
     useHead({
         title: "Abdelrahman Mahmoud | Full Stack Engineer"
@@ -116,11 +117,7 @@
       </section>
   
       <!-- FOOTER -->
-      <v-footer color="brand" dark padless>
-        <v-col class="text-center py-4">
-          © {{ new Date().getFullYear() }} Abdelrahman Mahmoud
-        </v-col>
-      </v-footer>
+      <Footer/>
   </template>
   
   
