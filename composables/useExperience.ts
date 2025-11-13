@@ -4,7 +4,10 @@ export function useExperience(){
         date: '08/2025 – Present',
           role: 'Full Stack Engineer',
           company: 'Homains',
-          desc: ["Translated business requirements into scalable technical solutions, which enabled 3+ key initiatives and reduced project delivery time by 30%.", "Partnered with cross-functional stakeholders to translate business needs into technical solutions, delivering 10+ successful product features that aligned with strategic goals. "],
+          desc: ["Translated business requirements into scalable technical solutions, which enabled 3+ key initiatives and reduced project delivery time by 30%.",
+                 "Partnered with cross-functional stakeholders to translate business needs into technical solutions, delivering 10+ successful product features that aligned with strategic goals.",
+                 "Developed and maintained 25+ automated end-to-end Cypress test cases to validate core user flows and ensure UI reliability.",
+                ],
           logo: "/homains-logo.png"
       },  
       {
