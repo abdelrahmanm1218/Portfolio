@@ -1,6 +1,6 @@
 export function useProjects(){
     const projects = [
-        /*{
+        {
             id: "PR-04",
             project_name: "Hanbee3",
             thumbnail: "",
@@ -10,7 +10,7 @@ export function useProjects(){
             technologies: ["Frappe", "Angular"],
             link: "https://hanbee3.com/home",
             classified: false
-        },*/
+        },
         {
             id: "PR-02",
             project_name: "Bus14",
