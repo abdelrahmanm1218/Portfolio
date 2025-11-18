@@ -25,7 +25,15 @@
                             <ul style="list-style: none; padding: 0;display: flex;flex-wrap: wrap;gap: 10px;">
                                 <li v-for="skill in frontend" :key="skill.name">
                                     <div class="skill-icon">
-                                        <v-img width="40" height="40" :src="skill.icon" :alt="skill.name"></v-img>
+                                        <NuxtImg
+                                            :src="skill.icon"
+                                            :alt="skill.name"
+                                            width="40"
+                                            height="40"
+                                            sizes="40px"
+                                            :modifiers="{ format: 'webp', quality: 80 }"
+                                            :img-attrs="{ loading: 'lazy' }"
+                                        />
                                         <span class="img-tooltip">{{ skill.name }}</span>
                                     </div>
                                 </li>
@@ -41,7 +49,15 @@
                             <ul style="list-style: none; padding: 0;display: flex;flex-wrap: wrap;gap: 10px;">
                                 <li v-for="skill in backend" :key="skill.name">
                                     <div class="skill-icon">
-                                        <v-img width="40" height="40" :src="skill.icon" :alt="skill.name"></v-img>
+                                        <NuxtImg
+                                            :src="skill.icon"
+                                            :alt="skill.name"
+                                            width="40"
+                                            height="40"
+                                            sizes="40px"
+                                            :modifiers="{ format: 'webp', quality: 60 }"
+                                            :img-attrs="{ loading: 'lazy' }"
+                                        />
                                         <span class="img-tooltip">{{ skill.name }}</span>
                                     </div>
                                 </li>
@@ -57,7 +73,15 @@
                             <ul style="list-style: none; padding: 0;display: flex;flex-wrap: wrap;gap: 10px;">
                                 <li v-for="skill in general" :key="skill.name">
                                     <div class="skill-icon">
-                                        <v-img width="40" height="40" :src="skill.icon" :alt="skill.name"></v-img>
+                                        <NuxtImg
+                                            :src="skill.icon"
+                                            :alt="skill.name"
+                                            width="40"
+                                            height="40"
+                                            sizes="40px"
+                                            :modifiers="{ format: 'webp', quality: 80 }"
+                                            :img-attrs="{ loading: 'lazy' }"
+                                        />
                                         <span class="img-tooltip">{{ skill.name }}</span>
                                     </div>
                                 </li>

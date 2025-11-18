@@ -12,7 +12,7 @@
                 reusable UI components and delivering user-friendly interfaces. I enjoy working in Agile
                 environments and bringing designs to life with pixel-perfect precision. -->
 
-                Full Stack Engineer passionate about crafting clean interfaces and scalable systems. I thrive in Agile teams and love delivering solutions that make an impact.
+                Full Stack Developer passionate about crafting clean interfaces and scalable systems. I thrive in Agile teams and love delivering solutions that make an impact.
             </p>
             <div class="d-flex flex-wrap">
                 <!-- FRONTEND -->

@@ -17,7 +17,7 @@ const sections = [
 
                 <v-col cols="12" md="3" class="text-center text-md-left">
                     <h3 class="text-h6 font-weight-bold">Abdelrahman Mahmoud</h3>
-                    <p class="text-body-2">Full Stack Engineer</p>
+                    <p class="text-body-2">Full Stack Developer</p>
                 </v-col>
 
                 <v-col cols="12" md="6" class="text-center">
