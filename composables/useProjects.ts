@@ -3,13 +3,14 @@ export function useProjects(){
         {
             id: "PR-04",
             project_name: "Hanbee3",
-            thumbnail: "",
+            thumbnail: "/images/projects/hanbee3-logo.png",
             short_description: "digital call center telesales solutions for buisnesses and remote telesales",
             start_date: "10/2025",
             end_date:"Present",
             technologies: ["Frappe", "Angular"],
             link: "https://hanbee3.com/home",
-            classified: false
+            classified: false,
+            currently_working: true,
         },
         {
             id: "PR-02",
@@ -22,6 +23,7 @@ export function useProjects(){
             technologies: ["Frappe",  "Angular"],
             link: "https://portal.bus14.co/",   
             classified: false,
+            currently_working: false,
         },
         
         {
@@ -31,10 +33,11 @@ export function useProjects(){
             // short_description: "Internhsip program to track interns and internship cycles",
             // description: "Internhsip program to track interns and internship cycles and guide new interns via user specific dashboards",
             start_date: "12/2024",
-            end_date: "03/2025",
-            technologies: ["TypeScript","Angular",  "Ant-Design", "Git-Flow"],
+            end_date: "Present",
+            technologies: ["TypeScript","Angular",  "Ant-Design", "Git-Flow", "Frappe"],
             link: "https://internship-dev.homains.online/home",
             classified: false,
+            currently_working: true,
 
         },
         {
@@ -48,6 +51,7 @@ export function useProjects(){
             technologies: ["Vue js",  "Vuetify", "Nuxt.js",  "TypeScript", "SEO"],
             link: "https://abdelrahman-mahmoud-portfolio.vercel.app/",   
             classified: false,
+            currently_working: true,
         },
         // {
         //     id: "PR-04",
@@ -60,6 +64,7 @@ export function useProjects(){
         //     technologies: ["TypeScript","Vuetify",  "Vuetify", "Git-Flow"],
         //     link: "",
         //     classified: true, 
+        //     currently_working: false,
         // }
         
     ]
