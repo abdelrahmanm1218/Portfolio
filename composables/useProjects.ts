@@ -35,7 +35,7 @@ export function useProjects(){
             start_date: "12/2024",
             end_date: "Present",
             technologies: ["TypeScript","Angular",  "Ant-Design", "Git-Flow", "Frappe"],
-            link: "https://internship-dev.homains.online/home",
+            link: "https://praxis.homains.eu/",
             classified: false,
             currently_working: true,
 

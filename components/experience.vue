@@ -23,7 +23,16 @@
           :side="smAndUp ? (i % 2 === 0 ? 'start' : 'end') : 'end'"
         >
         <template v-slot:icon>
-            <v-avatar :image="exp.logo"></v-avatar>
+            <v-avatar size="48">
+              <NuxtImg
+                :src="exp.logo"
+                class="exp-logo"
+                format="webp"
+                :quality="80"
+                densities="x1"
+                :img-attrs="{ loading: 'lazy', width: '48', height: '48' }"
+              />
+            </v-avatar>
         </template>
           <template #opposite>
             <strong class="d-none d-sm-inline">{{ exp.date }}</strong>
@@ -64,5 +73,12 @@
 
 .exp-list li {
   margin-bottom: 4px;
+}
+
+.exp-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 </style>

@@ -17,7 +17,15 @@
             <v-col cols="12" md="4" class="d-flex" v-for="proj in projects" :key="proj.id">
 
                 <v-card class="project-card d-flex flex-column h-100 w-100">
-                    <v-img :src="proj.thumbnail" height="200px" cover></v-img>
+                    <NuxtImg
+                      :src="proj.thumbnail"
+                      class="project-thumb"
+                      sizes="xs:320px sm:400px md:420px lg:420px"
+                      format="webp"
+                      :quality="80"
+                      densities="x1 x2"
+                      :img-attrs="{ loading: 'lazy', height: '200', width: '420' }"
+                    />
                     
                     
                     <v-card-title>{{ proj.project_name }}</v-card-title>
@@ -83,9 +91,17 @@
             :key="proj.id"
             
           >
-            <v-card  elevation="6" class="project-card d-flex flex-column h-100 w-100">
+                <v-card  elevation="6" class="project-card d-flex flex-column h-100 w-100">
               
-                <v-img :src="proj.thumbnail" height="200px" cover />
+                <NuxtImg
+                  :src="proj.thumbnail"
+                  class="project-thumb"
+                  sizes="xs:320px sm:360px"
+                  format="webp"
+                  :quality="100"
+                  densities="x1 x2"
+                  :img-attrs="{ loading: 'lazy', height: '200', width: '360' }"
+                />
               
               <v-card-title>{{ proj.project_name }}</v-card-title>
               
@@ -146,5 +162,12 @@
 
 .project-card:hover {
     transform: translateY(-2px);
+}
+
+.project-thumb {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
 }
 </style>
