@@ -28,9 +28,13 @@
 
                 <!-- BACKEND -->
                 <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Python</v-chip>
-                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Django</v-chip>
                 <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Frappe</v-chip>
+                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>ERPNext</v-chip>
+                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Django</v-chip>
                 <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>REST API</v-chip>
+                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Swagger</v-chip>
+                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Postman</v-chip>
+                <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>MySQL</v-chip>
 
                 <!-- GENERAL -->
                 <v-chip color="brand" variant="tonal" size="x-small" class="ma-1 text-caption" label>Git</v-chip>

@@ -14,8 +14,9 @@ export default function useSkills(){
     ]
     const backend = [
         {name: 'Python', icon: '/icons/python.svg'},
-        {name: 'Django', icon: '/icons/django.svg'},
         {name: 'Frappe', icon: '/icons/frappe.png'},
+        {name: 'ERPNext', icon: '/icons/Erpnext_logo.svg'},
+        {name: 'Django', icon: '/icons/django.svg'},
         {name: 'Postman', icon: '/icons/postman-api.svg'},
         {name: 'Swagger', icon: '/icons/swagger.svg'},
     ]

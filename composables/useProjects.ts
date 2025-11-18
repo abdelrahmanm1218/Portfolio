@@ -30,7 +30,7 @@ export function useProjects(){
             id: "PR-03",
             project_name: "Praxis",
             thumbnail: "/images/projects/Praxis.png",
-            // short_description: "Internhsip program to track interns and internship cycles",
+            short_description: "The Software Engineering Boot camp That Bridges the Gap between Education and Industry",
             // description: "Internhsip program to track interns and internship cycles and guide new interns via user specific dashboards",
             start_date: "12/2024",
             end_date: "Present",

@@ -1,20 +1,55 @@
 <script lang="ts" setup>
+    import { computed, ref } from 'vue';
     import { useProjects } from '~/composables/useProjects';
     import { useDisplay } from 'vuetify';
-    const projects= useProjects()
+    const projects = useProjects()
     const {smAndUp} = useDisplay()
 
+    const showWorkingOnly = ref(false)
+    const displayedProjects = computed(() => showWorkingOnly.value ? projects.filter((proj) => proj.currently_working) : projects)
+    const clearFilter = () => { showWorkingOnly.value = false }
 </script>
 
 
 <template>
 <section id="#projects" class="pt-8 pb-4">
         <v-container>
-          <h2 class="section-title mb-4">Latest Projects</h2>
+          <div class="projects-header mb-4">
+            <h2 class="section-title">Latest Projects</h2>
+            <div class="projects-filters">
+              <v-tooltip
+                text="Current Projects"
+                location="bottom"
+                content-class="projects-tooltip"
+              >
+                <template #activator="{ props }">
+                  <v-btn
+                    v-bind="props"
+                    icon="mdi-filter-variant"
+                    variant="tonal"
+                    :color="showWorkingOnly ? 'accent' : 'brand'"
+                    density="comfortable"
+                    @click="showWorkingOnly = !showWorkingOnly"
+                  />
+                </template>
+              </v-tooltip>
+              <v-chip
+                v-if="showWorkingOnly"
+                size="small"
+                color="accent"
+                variant="tonal"
+                class="ml-2"
+                closable
+                @click:close="clearFilter"
+              >
+                Currently working
+              </v-chip>
+            </div>
+          </div>
           <template v-if="smAndUp">
             <v-row align="stretch">
             
-            <v-col cols="12" md="4" class="d-flex" v-for="proj in projects" :key="proj.id">
+            <v-col cols="12" md="4" class="d-flex" v-for="proj in displayedProjects" :key="proj.id">
 
                 <v-card class="project-card d-flex flex-column h-100 w-100">
                     <NuxtImg
@@ -87,7 +122,7 @@
     </template>
 
           <v-carousel-item
-            v-for="proj in projects"
+            v-for="proj in displayedProjects"
             :key="proj.id"
             
           >
@@ -169,5 +204,23 @@
     height: 200px;
     object-fit: cover;
     display: block;
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.projects-filters {
+    display: flex;
+    align-items: center;
+}
+
+:deep(.projects-tooltip) {
+    background-color: var(--color-brand);
+    color: #ffffff !important;
 }
 </style>
