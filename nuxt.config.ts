@@ -37,6 +37,10 @@ export default defineNuxtConfig({
         { name: 'author', content: 'Abdelrahman Mahmoud' },
         { name: 'robots', content: 'index, follow' },
         { name: 'google-site-verification', content: '-lv4_8Y8Rs2jxCu57EeSYVkhdSfTz6BhK42HnyBJGjU' },
+        
+        // Mobile browser bar color (theme-color)
+        { name: 'theme-color', content: '#123524' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' },
 
         //og graph
         { property: 'og:title', content: 'Abdelrahman Mahmoud | Frontend Developer' },
