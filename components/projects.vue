@@ -80,7 +80,7 @@
             </div>
             <div class="projects-filters">
               <v-tooltip
-                text="Current Projects"
+                text="Ongoing Projects"
                 location="bottom"
                 content-class="projects-tooltip"
               >
@@ -104,7 +104,7 @@
                 closable
                 @click:close="clearFilter"
               >
-                Currently working
+                Ongoing Projects
               </v-chip>
               <div class="projects-sorter">
                 <v-menu
