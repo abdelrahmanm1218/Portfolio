@@ -2,7 +2,7 @@
     
     <v-container class="d-flex justify-center align-center fill-height" style="margin: 100px auto;">
         
-        <v-card color="brand" variant="tonal" class="dev-card text-center pa-4 d-flex flex-column align-center" style="width: 65%;">
+        <v-card color="brand" variant="tonal" class="dev-card text-center pa-4 d-flex flex-column align-center" style="width: 75%;">
             
             <h1 class="mt-4 text-h5 font-weight-bold" style="color: var(--color-brand);">Currently Under Development</h1>
 
