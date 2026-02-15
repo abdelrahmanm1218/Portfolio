@@ -53,6 +53,19 @@ export function useProjects(){
             classified: false,
             currently_working: true,
         },
+        /*
+        {
+            id: "PR-05",
+            project_name: "Tokens United",
+            thumbnail: "/images/projects/og-image.jpg",
+            short_description: "Digital call center & telesales solutions for businesses and telesales agents",
+            start_date: "10/2025",
+            end_date:"02/2026",
+            technologies: ["HTML", "SCSS", "Python"],
+            link: "https://hanbee3.com/home",
+            classified: false,
+            currently_working: false,
+        },*/
         // {
         //     id: "PR-04",
         //     project_name: "Classified",
