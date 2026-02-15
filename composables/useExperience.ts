@@ -1,6 +1,13 @@
 export function useExperience(){
     const experiences = [
       {
+          date: '12/2025 – Present',
+          role: 'Founder',
+          company: 'Catalyx Solutions',
+          desc: [],
+          logo: "/images/projects/Blue White Professional Minimal Brand Logo_20260213_220447_0000.png"
+        },
+        {
         date: '08/2025 – 02/2026',
           role: 'Full Stack Engineer',
           company: 'Homains',
