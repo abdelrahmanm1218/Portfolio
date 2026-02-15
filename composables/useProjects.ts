@@ -3,7 +3,7 @@ export function useProjects(){
         {
             id: "PR-07",
             project_name: "Catalyx",
-            thumbnail: "/images/projects/public/images/projects/Blue White Professional Minimal Brand Logo_20260213_220447_0000.png",
+            thumbnail: "/images/projects/Blue White Professional Minimal Brand Logo_20260213_220447_0000.png",
             short_description: "Portfolio website for Catalyx solutions",
             start_date: "12/2025",
             end_date:"Present",
