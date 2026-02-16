@@ -27,13 +27,13 @@
                                     <div class="skill-icon">
                                         <NuxtImg
                                             :src="skill.icon"
-                                            :alt="skill.name"
+                                            :alt="skill.name +' icon'"
                                             width="40"
                                             height="40"
                                             sizes="40px"
                                             :modifiers="{ format: 'webp', quality: 80 }"
                                             :img-attrs="{ loading: 'lazy' }"
-                                            :alt="skill.name +' logo'"
+                                            
                                         />
                                         <span class="img-tooltip">{{ skill.name }}</span>
                                     </div>
