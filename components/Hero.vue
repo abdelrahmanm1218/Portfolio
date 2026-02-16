@@ -21,7 +21,7 @@ onMounted(()=>{
 
             <v-row align="center" >
                 <v-col cols="12" md="5" order="1" order-md="1" class="text-center">
-                        <v-img src="/images/profile-hero.jpg" aspect-ratio="1" alt="Abdelrahman Mahmoud Portrait" :width="imgSize" class="avatar-img mx-auto rounded-circle elevation-4" cover></v-img>
+                        <v-img fetchpriority="high" src="/images/profile-hero.jpg" aspect-ratio="1" alt="Abdelrahman Mahmoud Portrait" :width="imgSize" class="avatar-img mx-auto rounded-circle elevation-4" cover></v-img>
 
                 </v-col>
 
