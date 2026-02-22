@@ -21,7 +21,7 @@ export function useExperience(){
 
 "Implemented 25+ Cypress end-to-end tests, reducing regression issues and enhancing UI stability.",
 
-"Collaborated with clients and cross-functional teams in Agile environments to ensure alignment and successful delivery.",,
+"Collaborated with clients and cross-functional teams in Agile environments to ensure alignment and successful delivery.",
                 ],
           logo: "/homains-logo.png"
       },  
