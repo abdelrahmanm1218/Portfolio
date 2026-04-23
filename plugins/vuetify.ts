@@ -1,14 +1,50 @@
 import { defineNuxtPlugin } from '#app'
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import {
+  VApp,
+  VContainer,
+  VRow,
+  VCol,
+  VCard,
+  VCardText,
+  VCardTitle,
+  VCardSubtitle,
+  VBtn,
+  VIcon,
+  VChip,
+  VChipGroup,
+  VTimeline,
+  VTimelineItem,
+  VAvatar,
+  VFooter,
+  VDivider,
+  VImg
+} from 'vuetify/components'
 import 'vuetify/styles'
 import '@mdi/font/css/materialdesignicons.css'
 
 export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
-    components,
-    directives,
+    components: {
+      VApp,
+      VContainer,
+      VRow,
+      VCol,
+      VCard,
+      VCardText,
+      VCardTitle,
+      VCardSubtitle,
+      VBtn,
+      VIcon,
+      VChip,
+      VChipGroup,
+      VTimeline,
+      VTimelineItem,
+      VAvatar,
+      VFooter,
+      VDivider,
+      VImg
+    },
     theme: {
       defaultTheme: 'light',
       themes: {
