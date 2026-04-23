@@ -11,6 +11,7 @@ type Project = {
     link: string;
     classified: boolean;
     currently_working: boolean;
+    role_filter: string; // for filtering by role (e.g., "Frontend", "Backend", "Full Stack")
 }
 
 export function useProjects(){
@@ -27,6 +28,7 @@ export function useProjects(){
             link: "https://hanbee3.com/home",
             classified: false,
             currently_working: false,
+            role_filter: "Full Stack",
         },
 
         {
@@ -41,6 +43,7 @@ export function useProjects(){
             link: "https://portal.bus14.co/",   
             classified: false,
             currently_working: false,
+            role_filter: "Full Stack",
         },
 
         {
@@ -55,7 +58,7 @@ export function useProjects(){
             link: "https://praxis.homains.eu/",
             classified: false,
             currently_working: false,
-
+            role_filter: "Full Stack",
         },
 
         {
@@ -69,6 +72,7 @@ export function useProjects(){
             link: "https://catalyx-delta.vercel.app/",
             classified: false,
             currently_working: true,
+            role_filter: "Frontend",
         },
         
         {
@@ -83,6 +87,7 @@ export function useProjects(){
             link: "https://abdelrahman-mahmoud-portfolio.vercel.app/",   
             classified: false,
             currently_working: true,
+            role_filter: "Frontend",
         },
          {
             id: "PR-06",
@@ -96,6 +101,7 @@ export function useProjects(){
              link: "https://www.techniyyat.com/",
              classified: true, 
             currently_working: false,
+            role_filter: "Frontend",
          },
         
         {
@@ -109,6 +115,7 @@ export function useProjects(){
             link: "https://tokensunited.com/",
             classified: false,
             currently_working: false,
+            role_filter: "Frontend",
         },
         
         {
@@ -122,6 +129,7 @@ export function useProjects(){
             link: "",
             classified: false,
             currently_working: false,
+            role_filter: "Frontend",
         },
        
         
