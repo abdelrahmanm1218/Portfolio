@@ -7,12 +7,17 @@
     <section class="pt-8 pb-4">
             <v-container>
             <h2 class="section-title mb-4">About</h2>
-            <p class="mb-6">
+            <p class="mb-3">
                 <!-- I'm a Computer Engineering graduate with almost 2 years of hands-on experience in building
                 reusable UI components and delivering user-friendly interfaces. I enjoy working in Agile
                 environments and bringing designs to life with pixel-perfect precision. -->
 
-                Full Stack Developer passionate about crafting clean interfaces and scalable systems. I thrive in Agile teams and love delivering solutions that make an impact.
+                Full Stack Engineer specializing in building user-centric web applications and scalable backend systems.
+            </p>
+            <p class="mb-6">
+                I help startups transform their ideas into scalable products using modern
+                web technologies. With a strong foundation in Computer Science, I focus on
+                writing clean, maintainable code.
             </p>
             <div class="d-flex flex-wrap">
                 <!-- FRONTEND -->
