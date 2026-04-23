@@ -15,7 +15,7 @@ onMounted(()=>{
 
 <template>
 
-    <section class="hero-section mt-12 d-flex flex-column align-center justify-center" :style="{backgroundColor: 'var(--color-background)',color: 'var(--color-text)',minHeight: '90vh' }">
+    <section id="hero" class="hero-section mt-12 d-flex flex-column align-center justify-center" :style="{backgroundColor: 'var(--color-background)',color: 'var(--color-text)',minHeight: '90vh' }">
         
         <v-container>
 

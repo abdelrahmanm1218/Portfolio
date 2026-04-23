@@ -1,23 +1,43 @@
 <script setup lang="ts">
 import { useDisplay } from 'vuetify';
-import { ref } from 'vue';
+import { ref, onMounted, onBeforeUnmount } from 'vue';
 import { useSocials } from '#imports';
 
 const { smAndUp } = useDisplay()
 let socials = ref()
 
 const links = [
-  { text: 'Home', to: '/' },
-  { text: 'About', to: '/about' },
-  { text: 'Skills', to: '/skills' },
-  { text: 'Projects', to: '/projects' },
-  { text: 'Experience', to: '/experience' },
+  { text: 'Home', to: '#hero' },
+  { text: 'About', to: '#about' },
+  // { text: 'Skills', to: '#skills' },
+  { text: 'Projects', to: '#projects' },
+  { text: 'Experience', to: '#experience' },
 ]
 
 const drawer = ref(false)
+const activeLink = ref('#hero')
+const observer = ref<IntersectionObserver | null>(null)
 
 onMounted(()=> {
   socials.value = useSocials()
+
+  const sections = ['hero', 'about',  'projects', 'experience']
+  observer.value = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activeLink.value = '#' + entry.target.id
+      }
+    })
+  }, { threshold: 0.5 })
+
+  sections.forEach(id => {
+    const el = document.getElementById(id)
+    if (el) observer.value?.observe(el)
+  })
+})
+
+onBeforeUnmount(() => {
+  observer.value?.disconnect()
 })
 </script>
 
@@ -52,9 +72,10 @@ onMounted(()=> {
         :key="link.text"
         variant="text"
         rounded="lg"
-        :to="link.to"
+        :href="link.to"
         style="color:var(--color-text)"
         class="nav-btn"
+        :class="{ 'active-link': activeLink === link.to }"
       >
         {{ link.text }}
       </v-btn>
@@ -83,11 +104,11 @@ onMounted(()=> {
 
   <v-navigation-drawer class="pa-2" v-model="drawer" :location="$vuetify.display.mobile? 'right': undefined" temporary>
     <v-list>
-      <v-list-item v-for="link in links" class="drawer-link pa-2" :to="link.to">
-        <v-list-item-title class="pa-0" style="color: var(--color-text);">{{ link.text }}</v-list-item-title>
+      <v-list-item v-for="link in links" :key="link.text" class="drawer-link pa-2">
+        <v-list-item-title class="pa-0" style="color: var(--color-text);">
+          <a :href="link.to" class="drawer-link-anchor" @click="drawer = false">{{ link.text }}</a>
+        </v-list-item-title>
       </v-list-item>
-
-      
 
     </v-list>
     <v-btn 
@@ -123,8 +144,14 @@ onMounted(()=> {
 .nav-btn:hover {
   background-color: var(--color-brand-lighter);
 }
-.nav-btn.v-btn--active {
+.nav-btn.active-link {
   background-color: var(--color-brand-light);
-  
+}
+.drawer-link-anchor {
+  color: inherit;
+  text-decoration: none;
+}
+.drawer-link-anchor:hover {
+  color: var(--color-text);
 }
 </style>
