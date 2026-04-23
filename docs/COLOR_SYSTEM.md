@@ -52,22 +52,9 @@ Available Vuetify colors:
 - `surface`
 - `surface-variant`
 
-### 3. Composable (For dynamic color usage in JavaScript)
+### 3. Composable (Removed for Performance)
 
-```vue
-<script setup>
-import { useColors } from '~/composables/useColors'
-
-const { brand, neutral, getBrandColor, hexToRgba } = useColors()
-
-// Direct access
-const primaryColor = brand.primary
-const backgroundColor = neutral.background
-
-// With opacity
-const brandWithOpacity = hexToRgba(brand.primary, 0.5)
-</script>
-```
+**Note**: The `useColors` composable was removed in the April 2026 optimization to reduce bundle size. Use CSS custom properties or Vuetify theme colors instead.
 
 ### 4. Utility Classes
 
@@ -115,16 +102,13 @@ Available utility classes:
 </style>
 ```
 
-### Dynamic Color Usage
+### Dynamic Color Usage (Alternative Approach)
 ```vue
 <script setup>
-import { useColors } from '~/composables/useColors'
-
-const { getBrandColor, hexToRgba } = useColors()
-
+// Use CSS custom properties directly
 const buttonStyle = computed(() => ({
-  backgroundColor: getBrandColor(),
-  boxShadow: `0 4px 12px ${hexToRgba(getBrandColor(), 0.3)}`
+  backgroundColor: 'var(--color-brand)',
+  boxShadow: '0 4px 12px var(--color-shadow-light)'
 }))
 </script>
 
@@ -137,20 +121,16 @@ const buttonStyle = computed(() => ({
 
 1. **Use CSS custom properties** for custom components and styling
 2. **Use Vuetify theme colors** for Vuetify components (v-btn, v-card, etc.)
-3. **Use the composable** when you need dynamic color manipulation
-4. **Use utility classes** for quick styling and prototyping
-5. **Avoid hardcoded hex values** in your components - always use the color system
+3. **Use utility classes** for quick styling and prototyping
+4. **Avoid hardcoded hex values** in your components - always use the color system
 
 ## Extending the Color System
 
 To add new colors, update these files:
 1. `assets/css/colors.css` - Add CSS custom properties
 2. `plugins/vuetify.ts` - Add to Vuetify theme
-3. `composables/useColors.ts` - Add to composable
 
 ## File Locations
 
 - **CSS Variables**: `assets/css/colors.css`
 - **Vuetify Theme**: `plugins/vuetify.ts`
-- **Composable**: `composables/useColors.ts`
-- **Global Import**: `nuxt.config.ts`
