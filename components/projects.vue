@@ -84,7 +84,9 @@
 <template>
 <section id="#projects" class="pt-8 pb-4">
         <v-container>
+
           <div class="projects-header mb-4">
+
             <div class="projects-title">
               <h2 class="section-title">Projects</h2>
               <v-chip
@@ -96,7 +98,9 @@
                 {{ displayedProjectsCount }}
               </v-chip>
             </div>
+
             <div class="projects-filters">
+
               <v-tooltip
                 text="Ongoing Projects"
                 location="bottom"
@@ -113,6 +117,7 @@
                   />
                 </template>
               </v-tooltip>
+
               <v-chip
                 v-if="showWorkingOnly"
                 size="large"
@@ -124,6 +129,7 @@
               >
                 Ongoing Projects
               </v-chip>
+
               <div class="projects-sorter">
                 <v-menu
                   v-model="sortMenu"
@@ -189,9 +195,13 @@
                   </template>
                 </v-tooltip>
               </div>
+
             </div>
           </div>
-          <template v-if="mdAndUp">
+
+
+          <!-- <template v-if="mdAndUp">
+
             <v-row align="stretch">
             
             <v-col cols="12" md="4" class="d-flex" v-for="proj in displayedProjects" :key="proj.id">
@@ -215,12 +225,24 @@
                     <v-card-subtitle v-if="proj.end_date && proj.end_date">{{ proj.start_date }} - {{ proj.end_date }}</v-card-subtitle>
                     
                     <v-card-text>
-                        {{proj.short_description}}
+                      <h6 class="card-body-title">problem</h6>
+                      <p class="card-problem">{{proj.short_description}}</p>
                     </v-card-text>
 
                     <v-card-text class="pt-0">
+                      <h6 class="card-body-title">solution</h6>
+                      <p class="card-desciption">{{proj.description? proj.description : 'currently empty to be added'}}</p>  
+                    </v-card-text>
+
+                    <v-card-text class="pt-0">
+                      <h6 class="card-body-title">my role</h6>
+                        <p class="card-role">{{proj.my_role? proj.my_role : 'currently empty to be added'}}</p>
+                    </v-card-text>
+
+                    <v-card-text class="pt-0">
+                      <h6 class="card-body-title">technologies</h6>
                         
-                        <v-chip
+                      <v-chip
                             v-for="tech in proj.technologies"
                             :key="tech"
                             size="x-small"
@@ -230,7 +252,7 @@
                             label
                         >
                             {{ tech }}
-                        </v-chip>
+                      </v-chip>
 
                     </v-card-text>
 
@@ -243,92 +265,114 @@
             </v-col>
 
             </v-row>
-          </template>
+          </template> -->
 
-          <template v-else>
+          <template>
+
             <v-carousel
               hide-delimiters
-              height="450"
-        >
-        <template #prev="{ props }">
-      <v-btn
-        v-bind="props"
-        icon="mdi-chevron-left"
-        color="accent"
-        variant="tonal"
-      />
-    </template>
-
-    <template #next="{ props }">
-      <v-btn
-        v-bind="props"
-        icon="mdi-chevron-right"
-        color="accent"
-        variant="tonal"
-      />
-    </template>
-
-          <v-carousel-item
-            v-for="proj in displayedProjects"
-            :key="proj.id"
-            
-          >
-                <v-card  elevation="6" class="project-card d-flex flex-column h-100 w-100">
-              
-                <div class="project-thumb-wrapper">
-                  <NuxtImg
-                    :src="proj.thumbnail"
-                    class="project-thumb"
-                    sizes="xs:320px sm:360px"
-                    format="webp"
-                    :quality="100"
-                    densities="x1 x2"
-                    :img-attrs="{ loading: 'lazy', width: '360', height: '203' }"
-                  />
-                </div>
-              
-              <v-card-title>{{ proj.project_name }}</v-card-title>
-              
-              <v-card-subtitle v-if="proj.end_date">
-                {{ proj.start_date }} - {{ proj.end_date }}
-              </v-card-subtitle>
-
-              <v-card-text>
-                {{ proj.short_description }}
-              </v-card-text>
-
-              <v-card-text class="pt-0">
-                <v-chip
-                  v-for="tech in proj.technologies"
-                  :key="tech"
-                  size="x-small"
-                  class="ma-1 text-caption"
-                  color="brand"
-                  variant="tonal"
-                  label
-                >
-                  {{ tech }}
-                </v-chip>
-              </v-card-text>
-
-              <v-card-actions class="mt-auto justify-end">
+              height=""
+              :style="{  boxShadow: '0 6px 16px rgba(0, 0, 0, 0.18)'}"
+            >
+              <template #prev="{ props }">
                 <v-btn
-                  v-if="proj.link"
+                  v-bind="props"
+                  icon="mdi-chevron-left"
                   color="accent"
                   variant="tonal"
-                  :href="proj.link"
-                  target="_blank"
-                  rounded="lg"
-                  density="comfortable"
-                >
-                  View
-                </v-btn>
-              </v-card-actions>
+                />
+              </template>
 
-            </v-card>
-            
-          </v-carousel-item>
-        </v-carousel>
+              <template #next="{ props }">
+                <v-btn
+                  v-bind="props"
+                  icon="mdi-chevron-right"
+                  color="accent"
+                />
+              </template>
+
+              <v-carousel-item
+                v-for="proj in displayedProjects"
+                :key="proj.id"
+                
+              >
+                <v-card  elevation="8" class="project-card d-flex flex-column-reverse flex-md-row h-100 w-100">
+                  
+                  
+                  <div class="project-info-wrapper">
+                    <v-card-title class="mt-2 mb-0">
+                    <h3 class="card-title">{{ proj.project_name }}</h3>
+                  </v-card-title>
+                  
+                  <v-card-subtitle v-if="proj.end_date">
+                    <p class="card-date">{{ proj.start_date }} - {{ proj.end_date }}</p>
+                  </v-card-subtitle>
+
+                  <v-card-text>
+                    <h6 class="card-body-title">problem</h6>
+                    <p class="card-problem">{{ proj.short_description? proj.short_description : 'currently empty to be added' }}</p>
+                  </v-card-text>
+
+                  <v-card-text>
+                    <h6 class="card-body-title">solution</h6>
+                    <p class="card-description">{{ proj.description? proj.description : 'currently empty to be added' }}</p>
+                  </v-card-text>
+
+                  <v-card-text>
+                    <h6 class="card-body-title">My role</h6>
+                    <p class="card-role">{{proj.my_role? proj.my_role : 'currently empty to be added'}}</p>
+                  </v-card-text>
+
+                  <v-card-text class="pt-0">
+                    <h6 class="card-body-title">technologies</h6>
+                    <v-chip
+                      v-for="tech in proj.technologies"
+                      :key="tech"
+                      size="x-small"
+                      class="ma-1 text-caption"
+                      color="brand"
+                      variant="tonal"
+                      label
+                    >
+                      {{ tech }}
+                    </v-chip>
+                  </v-card-text>
+
+                  <v-card-actions class="mt-auto justify-end">
+                    <v-btn
+                      v-if="proj.link"
+                      color="accent"
+                      variant="tonal"
+                      :href="proj.link"
+                      target="_blank"
+                      rounded="lg"
+                      density="comfortable"
+                    >
+                      View
+                    </v-btn>
+                  </v-card-actions>
+
+                  </div>
+
+                  <div class="project-thumb-wrapper">
+                    <NuxtImg
+                      :src="proj.thumbnail"
+                      class="project-thumb"
+                      sizes="xs:320px sm:360px"
+                      format="webp"
+                      :quality="100"
+                      densities="x1 x2"
+                      :img-attrs="{ loading: 'lazy', width: '360', height: '203' }"
+                    />
+                  </div>
+
+                  
+                  
+                </v-card>
+                
+              </v-carousel-item>
+
+            </v-carousel>
 
           </template>
           
@@ -339,28 +383,25 @@
 </template>
 
 <style scoped>
-.project-card {
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
-}
 
-.project-card:hover {
-    transform: translateY(-2px);
+.project-info-wrapper {
+  flex:1;
 }
-
 .project-thumb-wrapper {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    border-radius: 0;
-    background: var(--color-surface-variant);
+
+    flex:1;
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .project-thumb {
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 50%;
     object-fit: cover;
     display: block;
+    border-radius: 12px;
 }
 
 .projects-header {
@@ -393,6 +434,10 @@
 .projects-sorter {
     display: flex;
     align-items: center;
+}
+
+.card-body-title {
+    text-transform: capitalize;
 }
 
 :deep(.projects-tooltip) {
