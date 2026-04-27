@@ -22,50 +22,7 @@ A modern, responsive portfolio website showcasing my skills, projects, and exper
 - **Image Optimization**: Nuxt Image with WebP support
 - **Deployment**: Vercel (recommended)
 
-## 📦 Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Prepare Nuxt**
-   ```bash
-   npm run postinstall
-   ```
-
-## 🚀 Development
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:3000`
-
-## 🏗️ Build & Deployment
-
-### Build for Production
-```bash
-npm run build
-```
-
-### Generate Static Site
-```bash
-npm run generate
-```
-
-### Preview Production Build
-```bash
-npm run preview
-```
 
 ## 📁 Project Structure
 
@@ -141,26 +98,6 @@ The portfolio is fully responsive with breakpoints:
 
 Uses Vuetify's responsive utilities and custom CSS for optimal display across devices.
 
-## 🔧 Configuration
-
-### Nuxt Config (`nuxt.config.ts`)
-- Server-side rendering enabled
-- Nuxt Image module for optimization
-- Sitemap generation
-- Custom head meta tags
-
-### Vuetify Setup (`plugins/vuetify.ts`)
-- Tree-shaken component imports
-- Custom theme with brand colors
-- Material Design Icons integration
-
-## 📊 SEO & Meta Tags
-
-- Dynamic meta titles and descriptions
-- Open Graph tags for social sharing
-- Twitter Card support
-- Canonical URLs
-- Robots.txt and sitemap.xml
 
 ## 📞 Contact
 
